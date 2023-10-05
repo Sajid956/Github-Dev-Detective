@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Github Dev-Detective</title>
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <div class="title">
+            <h1>DevDetective</h1>
+
+            <div class="mode">
+                <p mode-info>LIGHT</p>
+                <img src="./images/moon-icon.svg" alt="" mode-image>
+            </div>
+        </div>
+
+        <div class="searchBox">
+            <img src="./images/search-icon.svg" alt="">
+            <input type="text" placeholder="Enter a Github username..." search-input>
+            <button search-btn>Search</button>
+        </div>
+
+        <div class="profile-section">
+            <img src="" alt="" user-image>
+
+            <div class="main-profile">
+
+                <div user-profileDetails>
+                    <h2 user-name></h2>
+                    <a href="#" user-profile></a>
+                    <p user-date></p>
+                </div>
+
+                <p description></p>
+
+                <div user-followersDetails>
+                    <div class="followers">
+                        <h3>Repos</h3>
+                        <p user-repo></p>
+                    </div>
+
+                    <div class="followers">
+                        <h3>Followers</h3>
+                        <p user-followers></p>
+                    </div>
+                    <div class="followers">
+
+                        <h3>Following</h3>
+                        <p user-following></p>
+                    </div>
+
+                    
+                </div>
+
+                <div user-contactDetails>
+                    <div class="contact-info">
+                        <img src="/images/location-icon.svg" alt="">
+                        <p data-location></p>
+                    </div>
+                    <div class="contact-info">
+                        <img src="/images/website-icon.svg" alt="">
+                        <a href="" data-userId></a>
+                    </div>
+                    <div class="contact-info">
+                        <img src="/images/twitter-icon.svg" alt="">
+                        <a href="" data-twitter></a>
+                    </div>
+                    <div class="contact-info">
+                        <img src="/images/company-icon.svg" alt="">
+                        <p data-company></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div loader-container>
+            <img src="" alt="" loader-image>
+        </div>
+
+        <div error-msg>
+            <h2 error-code>145</h2>
+            <p error-text>fasfa</p>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/0d03aced6f.js" crossorigin="anonymous"></script>
+</body>
+</html>

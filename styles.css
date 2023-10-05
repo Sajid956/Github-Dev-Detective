@@ -1,0 +1,338 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+:root{
+    --lm-bg: #f6f8ff;
+    --lm-bg-content: #fefefe;
+    --lm-text: #4b6a9b;
+    --lm-text-alt: #2b3442;
+    --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    --lm-icon-bg: brightness(100%);
+    /* Btn */
+    --btn: #0079ff;
+    --btn-hover: #60abff;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem ;
+    gap: 3rem;
+    background-color: var(--lm-bg);
+    font-size: 13px;
+    color: var(--lm-text);
+}
+
+.title {
+    max-width: 780px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mode {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 13px;
+}
+
+.mode p{
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.searchBox {
+    position: relative;
+    max-width: 780px;
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    background-color: var(--lm-bg-content);
+    border-radius: 15px;
+    box-shadow: var(--lm-shadow);
+    padding: 8px;
+}
+
+.searchBox input {
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 100%;
+    background-color: var(--lm-bg-content);
+    color: var(--lm-text);
+}
+
+.searchBox input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--lm-text);
+}
+
+.searchBox img {
+    width: 20px;
+    height: 20px;
+}
+
+[search-btn] {
+    min-width: 84px;
+    padding: 12px 16px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+[search-btn]:hover {
+    cursor: pointer;
+    background-color: var(--btn-hover);
+}
+
+.profile-section {
+    max-width: 780px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--lm-bg-content);
+    border-radius: 15px;
+    box-shadow: var(--lm-shadow);
+    padding: 1.5rem;
+    margin-top: -1.4rem;
+}
+
+.profile-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    align-self: self-start;
+    margin-top: 10px;
+}
+
+.main-profile {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: 2.5rem;
+}
+
+[user-profileDetails] {
+    position: relative;
+    line-height: 1.5;
+}
+
+[user-profileDetails] h2 {
+    font-size: 1.7rem;
+    color: var(--lm-text-alt);
+}
+
+[user-date] {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    font-size: 14px;
+}
+
+[user-profile] {
+    font-size: 18px;
+    color: var(--btn);
+}
+
+[description] {
+    margin-top: -16px;
+    font-size: 14px;
+}
+
+[user-followersDetails] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--lm-bg);
+    padding: 0.8rem;
+    border-radius: 15px;
+}
+
+.followers{
+    line-height: 2;
+}
+
+.followers h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.followers p{
+    color: var(--lm-text-alt);
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+
+[user-contactDetails] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    grid-gap: 15px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info img {
+    width: 15px;
+    height: 20px;
+    filter: var(--lm-icon-bg);
+}
+
+.contact-info a {
+    color: var(--lm-text);
+    word-break: break-all;
+}
+
+.contact-info p {
+    overflow-wrap: break-word;
+  }
+
+.contact-info p, a {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+[error-msg] {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+[error-code] {
+    font-size: 4rem;
+    color: red;
+    font-weight: 600;
+}
+
+[error-text] {
+    font-size: 1.8rem;
+}
+
+[loader-image] {
+    width: 100px;
+    /* background: transparent; */
+    background-color: blue;
+}
+
+@media (max-width: 768px) {
+
+    #wrapper {
+        padding-top: 3.5rem;
+        gap: 2rem;
+    }
+
+    .title, .searchBox, .profile-section {
+        width: 327px;
+    }
+
+    .searchBox input {
+        width: 50%;
+    }
+
+    .searchBox input::placeholder {
+        font-weight: normal;
+        font-size: 10px;
+    }
+
+    .searchBox img {
+        width: 17px;
+        height: 17px;
+    }
+
+    [search-btn] {
+        margin-right: -0.8rem;
+    }
+
+    .profile-section {
+        position: relative;
+        gap: 1.2rem;
+    }
+
+    .profile-section img {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 7%;
+    }
+
+    .main-profile {
+        width: 100%;
+    }
+
+    [user-profileDetails] {
+        margin-top: 0.8rem;
+        margin-left: 6rem;
+        line-height: 1.4;
+    }
+
+    [user-profileDetails] h2{
+        font-size: 1.1rem;
+    }
+
+    [user-profile] {
+        font-size: 14px;
+ 
+    }
+
+    [user-date] {
+        position: static;
+        margin-top: 10px;
+    }
+
+    [description] {
+        font-size: 13px;
+    }
+
+    [user-followersDetails] {
+        margin-top: -16px;
+    }
+
+    .followers h3 {
+        font-size: 13px;
+    }
+
+    [user-contactDetails] {
+        margin-top: -40px;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+    }
+
+    .contact-info img {
+        position: static;
+        width: 15px;
+        height: 20px;
+        margin-top: 20px;
+        filter: var(--lm-icon-bg);
+    }
+
+}
